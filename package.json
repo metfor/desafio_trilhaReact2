@@ -7,11 +7,15 @@
     "dev": "webpack serve",
     "server": "json-server server.json --port 3333",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "commit":"git-cz"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "json-server": "^0.16.3",
+    "prettier": "^2.4.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.9",
@@ -29,8 +33,10 @@
     "@typescript-eslint/parser": "^4.33.0",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
+    "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.26.1",
     "file-loader": "^6.2.0",
@@ -46,5 +52,10 @@
     "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
